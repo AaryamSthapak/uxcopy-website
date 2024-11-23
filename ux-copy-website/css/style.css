@@ -1,0 +1,219 @@
+/* Base Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Add this */
+    align-items: center;     /* Add this */
+}
+
+
+/* Header */
+
+.brand-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;  /* 20px space between logo and text */
+}
+
+.brand-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+    background-color: #FF7B5F;
+    border-radius: 4px;
+}
+
+.brand-text {
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center; /* Change this from space-between */
+    align-items: center;     /* Change this from flex-start */
+    gap: 200px;
+    flex: 1;
+    width: 100%;            /* Add this */
+    max-width: 1200px;      /* Add this to control maximum width */
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    margin-top: 48px;
+}
+
+.hero-description {
+    font-size: 18px;
+    font-weight: 400; /* regular */
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 96px; /* spacing to CTA */
+}
+
+/* Button Group Styles */
+.button-group {
+    display: flex;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF7670 8.66%, #FFC170 132.22%), #FCEDE0; /* Gradient background */
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700; /* bold */
+    transition: background-color 0.2s, transform 0.3s;
+}
+
+
+.cta-button:hover {
+    background-color: #ff8d73;
+}
+
+/* App Preview Image */
+.app-preview {
+    width: 360px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+/* Responsive Design for Mobile */
+/* Mobile Design Changes */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust Heading "UX Copy — The AI..." */
+    .brand-title {
+        display: flex;
+        align-items: center; /* Align logo and text on the same line */
+        justify-content: center; /* Center the content horizontally */
+        gap: 12px;
+        margin-top: 32px; /* Space between logo and text */
+    }
+
+    .brand-logo {
+        width: 32px; /* Ensure logo size stays consistent */
+        height: 32px;
+    }
+
+    .button-group {
+        justify-content: center; /* Center the button */
+        width: 100%;
+        /* Ensure it takes full width */
+    }
+
+    .cta-button {
+        width: 196px; /* Button width for smaller screens */
+    }
+
+    /* Adjust Heading "Write Better..." */
+    h1 {
+        font-size: 56px; /* Set font size to 56px */
+        font-weight: bold;
+        margin-bottom: 12px;
+        margin-top: 84px; /* Space between "Write Better..." and "UX copy is trained..." */
+    }
+
+    /* Adjust Description "UX Copy is trained..." */
+    .hero-description {
+        font-size: 14px; /* Set font size to 14px */
+        font-weight: 400; /* Regular font weight */
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 48px; /* Space between "UX copy is trained..." and CTA */
+    }
+
+    /* CTA Button Adjustments */
+    .cta-button {
+        width: 196px; /* Width of button on mobile */
+        padding: 0.75rem 1.5rem;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #FF7670 8.66%, #FFC170 132.22%), #FCEDE0;
+        color: #000000;
+        text-decoration: none;
+        transition: background-color 0.2s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05); /* Hover effect */
+    }
+
+    /* Adjust App Preview Image */
+    .app-preview {
+        width: 100%;
+        max-width: 360px;
+        margin-top: 0px; /* Space between CTA and app preview image */
+    }
+
+    /* Center Content for Mobile */
+    .hero-content {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}
+
+/* For smaller screens like 360px */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 48px; /* Adjust font size for very small screens */
+    }
+
+    .hero-description {
+        font-size: 12px; /* Adjust description font size for 360px screens */
+    }
+
+    .cta-button {
+        width: 100%; /* Full width on very small screens */
+        padding: 0.75rem;
+    }
+
+    .app-preview {
+        width: 100%;
+        max-width: 280px; /* Reduce app preview image size for smaller screens */
+        margin-top: 0px;
+    }
+}
